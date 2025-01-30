@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>build.gradle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle</font>
+</center></td></tr></table>
+<pre><span class="s0">allprojects </span><span class="s1">{</span>
+    <span class="s0">repositories </span><span class="s1">{</span>
+        <span class="s0">google</span><span class="s1">()</span>
+        <span class="s0">mavenCentral</span><span class="s1">()</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">rootProject.buildDir </span><span class="s1">= </span><span class="s2">&quot;../build&quot;</span>
+<span class="s0">subprojects </span><span class="s1">{</span>
+    <span class="s0">project.buildDir </span><span class="s1">= </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">{</span><span class="s0">rootProject.buildDir</span><span class="s1">}</span><span class="s2">/</span><span class="s0">$</span><span class="s1">{</span><span class="s0">project.name</span><span class="s1">}</span><span class="s2">&quot;</span>
+<span class="s1">}</span>
+<span class="s0">subprojects </span><span class="s1">{</span>
+    <span class="s0">project.evaluationDependsOn</span><span class="s1">(</span><span class="s2">&quot;:app&quot;</span><span class="s1">)</span>
+<span class="s1">}</span>
+
+<span class="s0">tasks.register</span><span class="s1">(</span><span class="s2">&quot;clean&quot;</span><span class="s0">, Delete</span><span class="s1">) {</span>
+    <span class="s0">delete rootProject.buildDir</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

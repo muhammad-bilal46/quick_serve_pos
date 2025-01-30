@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "393426116947",
+    "project_id": "pbl-mad",
+    "storage_bucket": "pbl-mad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393426116947:android:01ebc751b0db2504da01a6",
+        "android_client_info": {
+          "package_name": "com.example.quick_serve_pos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnlGKV3wBeTRG3rUwz530SNhWk6dQUJBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
